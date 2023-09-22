@@ -6,7 +6,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import clsx from "clsx";
-import { Code, MessageSquarePlus, Info } from "lucide-react";
+import { Code, Info } from "lucide-react";
 import { signOut, useSession } from "next-auth/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { cn } from "@/src/utils/tailwind";
@@ -17,7 +17,6 @@ import {
 } from "@/src/components/ui/avatar";
 import { api } from "@/src/utils/api";
 import { NewProjectButton } from "@/src/features/projects/components/NewProjectButton";
-import { FeedbackButtonWrapper } from "@/src/features/feedback/component/FeedbackButton";
 import { Button } from "@/src/components/ui/button";
 import Head from "next/head";
 import { env } from "@/src/env.mjs";
@@ -214,15 +213,6 @@ export default function Layout(props: PropsWithChildren) {
                                 </Link>
                               </li>
                             ))}
-                            <FeedbackButtonWrapper className="w-full">
-                              <li className="group flex cursor-pointer gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-indigo-600">
-                                <MessageSquarePlus
-                                  className="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600"
-                                  aria-hidden="true"
-                                />
-                                Feedback
-                              </li>
-                            </FeedbackButtonWrapper>
                           </ul>
                         </li>
                         <li>
@@ -316,15 +306,6 @@ export default function Layout(props: PropsWithChildren) {
                         </Link>
                       </li>
                     ))}
-                    <FeedbackButtonWrapper className="w-full">
-                      <li className="group flex cursor-pointer gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-indigo-600">
-                        <MessageSquarePlus
-                          className="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600"
-                          aria-hidden="true"
-                        />
-                        Feedback
-                      </li>
-                    </FeedbackButtonWrapper>
                   </ul>
                 </li>
 

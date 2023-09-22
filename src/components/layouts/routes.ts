@@ -1,7 +1,5 @@
 import {
-  FlaskConical,
   LayoutDashboard,
-  LifeBuoy,
   LineChart,
   ListTree,
   Settings,
@@ -14,11 +12,6 @@ export const ROUTES = [
     name: "Dashboard",
     pathname: `/project/[projectId]`,
     icon: LayoutDashboard,
-  },
-  {
-    name: "Analytics (alpha)",
-    pathname: `/project/[projectId]/analytics`,
-    icon: FlaskConical,
   },
   {
     name: "Traces",
@@ -44,10 +37,5 @@ export const ROUTES = [
     name: "Settings",
     pathname: "/project/[projectId]/settings",
     icon: Settings,
-  },
-  {
-    name: "Support",
-    pathname: "/project/[projectId]/support",
-    icon: LifeBuoy,
   },
 ];
